@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cocktail.name %>
+  <% @cocktail.doses.each do |dose| %>
+  <p> <%= dose.description %> of <%= dose.ingredient.name %></p>
+  <% end %>
+</p>
+
+<%= link_to "View index of doses", cocktail_doses_path(@cocktail) %> |
+<%= link_to 'Edit cocktail name', edit_cocktail_path(@cocktail) %> |
+<%= link_to 'Back to index of cocktails', cocktails_path %>
