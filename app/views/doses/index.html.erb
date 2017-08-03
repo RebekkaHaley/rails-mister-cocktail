@@ -1,15 +1,20 @@
-<p>
-  <strong>Doses for:</strong>
-  <%= @cocktail.name %>
+<div class="text-center">
+  <h2>Index of doses</h2>
+  <p>
+    <strong>For:</strong>
+    "<%= @cocktail.name %>"
+  </p>
   <% @doses.each do |dose| %>
   <p>
     <%= dose.description %> of <%= dose.ingredient.name %>
-    <%= link_to 'show', cocktail_dose_path(id: dose.id) %>
-    <%= link_to 'delete', cocktail_dose_path(id: dose.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Show', cocktail_dose_path(id: dose.id), class: "btn btn-primary" %>
+    <%= link_to 'Delete', cocktail_dose_path(id: dose.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
   </p>
   <% end %>
-</p>
+</div>
 
-<%= link_to 'Add a dose', new_cocktail_dose_path %> |
-<%= link_to 'Back to cocktail page', cocktail_path(@cocktail) %> |
-<%= link_to 'Back to index of cocktails', cocktails_path %>
+<div class="text-center">
+  <%= link_to 'Add a dose', new_cocktail_dose_path, class: "btn btn-primary" %>
+  <%= link_to 'Back to cocktail page', cocktail_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to 'Back to index of cocktails', cocktails_path, class: "btn btn-primary" %>
+</div>

@@ -1,13 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="text-center">
+  <p id="notice"><%= notice %></p>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-  <% @cocktail.doses.each do |dose| %>
-  <p> <%= dose.description %> of <%= dose.ingredient.name %></p>
-  <% end %>
-</p>
+<div class="text-center">
+  <h2>
+    <strong>Name:</strong>
+    <%= @cocktail.name %>
+  </h2>
+</div>
 
-<%= link_to "View index of doses", cocktail_doses_path(@cocktail) %> |
-<%= link_to 'Edit cocktail name', edit_cocktail_path(@cocktail) %> |
-<%= link_to 'Back to index of cocktails', cocktails_path %>
+<div class="text-center">
+  <p>
+    <% @cocktail.doses.each do |dose| %>
+    <p> <%= dose.description %> of <%= dose.ingredient.name %></p>
+    <% end %>
+  </p>
+</div>
+
+<div class="text-center">
+  <%= link_to "View index of doses", cocktail_doses_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to 'Edit cocktail name', edit_cocktail_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to 'Back to index of cocktails', cocktails_path, class: "btn btn-primary" %>
+</div>

@@ -1,1 +1,13 @@
-<%= render 'form' %>
+<div class="text-center">
+  <h2>Add a dose</h2>
+</div>
+
+<div class="text-center form-group">
+  <%= render 'form' %>
+</div>
+
+<div class="text-center">
+  <%= link_to 'Back to cocktail doses', cocktail_doses_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to 'Back to cocktail page', cocktail_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to 'Back to index of cocktails', cocktails_path, class: "btn btn-primary" %>
+</div>
