@@ -10,7 +10,7 @@ class DosesController < ApplicationController
   end
 
   def new
-    @dose = @doses.new
+    @dose = Dose.new
   end
 
   def create
