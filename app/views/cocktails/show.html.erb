@@ -12,12 +12,15 @@
 <div class="text-center">
   <p>
     <% @cocktail.doses.each do |dose| %>
-    <p> <%= dose.description %> of <%= dose.ingredient.name %></p>
+    <p>
+      <%= dose.description %> of <%= dose.ingredient.name %>
+      <%= link_to 'Delete', dose_path(id: dose.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-warning" %>
+    </p>
     <% end %>
   </p>
 </div>
 
 <div class="text-center">
-  <%= link_to "View index of doses", cocktail_doses_path(@cocktail), class: "btn btn-primary" %>
-  <%= link_to 'Back to index of cocktails', cocktails_path, class: "btn btn-primary" %>
+  <%= link_to 'Add a dose', new_cocktail_dose_path(cocktail_id: @cocktail.id), class: "btn btn-success" %>
+  <%= link_to 'Back to Index', cocktails_path, class: "btn btn-primary" %>
 </div>
