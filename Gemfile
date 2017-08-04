@@ -35,18 +35,19 @@ gem 'turbolinks', '~> 5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Faker for seeding
+# For db seeding
 gem 'faker'
-# useful comments by Inou .......
+# Useful comments by Inou
 gem 'pry-byebug'
-
+# For pretty css stuff
 gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "simple_form"
 gem "autoprefixer-rails"
-
-# security
+# For security
 gem 'figaro'
+# For uploading images
+gem 'cloudinary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
