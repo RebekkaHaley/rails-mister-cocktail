@@ -15,10 +15,6 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new
   end
 
-  # GET /cocktails/1/edit
-  def edit
-  end
-
   # POST /cocktails
   def create
     @cocktail = Cocktail.new(cocktail_params)
@@ -28,21 +24,6 @@ class CocktailsController < ApplicationController
     else
       render :new
     end
-  end
-
-  # PATCH/PUT /cocktails/1
-  def update
-    if @cocktail.update(cocktail_params)
-      redirect_to @cocktail, notice: 'Cocktail was successfully updated.'
-    else
-      render :edit
-    end
-  end
-
-  # DELETE /cocktails/1
-  def destroy
-    @cocktail.destroy
-    redirect_to cocktails_url, notice: 'Cocktail was successfully destroyed.'
   end
 
   private
