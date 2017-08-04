@@ -35,10 +35,10 @@ Ingredient.create(name: "Sugar and sugar cubes")
 Ingredient.create(name: "Roses Lime Cordial")
 Ingredient.create(name: "Mint leaves")
 
-10.times do
-  cocktail = Cocktail.create(name: Faker::Coffee.blend_name)
-  3.times do
-    Dose.create(description: Faker::Food.measurement, cocktail: cocktail, ingredient: Ingredient.all.sample)
-  end
-end
+# 5.times do
+#   cocktail = Cocktail.create(name: Faker::Coffee.blend_name)
+#   3.times do
+#     Dose.create(description: Faker::Food.measurement, cocktail: cocktail, ingredient: Ingredient.all.sample)
+#   end
+# end
 
