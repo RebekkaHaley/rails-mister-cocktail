@@ -12,7 +12,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
+  color: $green;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -22,5 +22,5 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #D23333;
+  color: $yellow;
 }
